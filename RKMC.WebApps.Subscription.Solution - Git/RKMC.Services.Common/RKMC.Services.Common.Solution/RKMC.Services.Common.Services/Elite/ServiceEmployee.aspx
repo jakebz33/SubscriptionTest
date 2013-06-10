@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ServiceEmployee.aspx.cs" Inherits="RKMC.Services.Common.Services.ServiceEmployee" EnableViewState="false" %>

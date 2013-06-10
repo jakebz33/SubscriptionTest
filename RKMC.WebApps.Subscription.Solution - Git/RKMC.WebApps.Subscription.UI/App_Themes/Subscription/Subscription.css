@@ -1,0 +1,967 @@
+﻿#Header
+{
+    position:fixed;
+    z-index:1000;
+}
+#ContentWrapper
+{
+    position:relative;
+    top:82px;
+}
+.DisplaySearchCriteria
+{
+    background-image:url('Images/icon_search_sm.png');
+    background-position:left center;
+    background-repeat:no-repeat;
+    padding-left:20px;
+    height:14px;
+    color:#990000;
+}
+.ADeleteSearchFilter
+{
+    background-image:url('Images/delete_sm.png');
+    background-position:left center;
+    background-repeat:no-repeat;
+    padding-left:20px;
+    cursor:pointer;
+    height:14px;
+    padding-top:2px;
+}
+p
+{
+    font-size:12px;
+}
+a:hover
+{
+    color:#000000;
+    cursor:pointer;
+}
+#ReportContentAuto
+{
+	border-left:solid 2px #f2f2f2;
+	overflow:auto;
+	padding:0;
+}
+#ReportContent
+{
+	border-left:solid 2px #f2f2f2;
+	overflow:hidden;
+	padding:0;
+}
+#FormContent
+{
+	width:100%;
+}
+#AdminForm
+{
+	font-size:11px;
+	color:#525252;
+	margin-left:auto;
+	margin-right:auto;
+	width:600px;
+}
+#AdminForm table
+{
+	border:solid 1px #e1e1e1;
+}
+#AdminForm table td
+{
+	border-top:solid 1px #e1e1e1;
+}
+#FormDataEntry_MasterInnerContentMatter,
+#FormDataEntry_MasterInnerContentForm,
+#MasterMemberList_MasterInnerContentMemberList,
+#MasterMemberList_MasterInnerContentMemberListForm
+{
+    border:1px solid #fff;
+    padding:5px;
+    
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 1em rgba(0, 0, 0, .1);
+}
+#FormDataEntry_MasterInnerContentMatter
+{
+    height:115px;
+    overflow:hidden;
+}
+#FormDataEntry_MasterInnerContentForm,
+#MasterMemberList_MasterInnerContentMemberListForm
+{
+    height:330px;
+    overflow:auto;
+    background-color:#fff;
+}
+#DataEntryForm textarea
+{
+    width:300px;
+}
+.FormDate,
+.PatentTextBox
+{
+    width:70px;
+}
+.FormButtonArea
+{
+	text-align:right;
+	padding-bottom:5px;
+	padding-top:5px;
+}
+.FormButton,
+.FormButtonCancel,
+.FormModalButton,
+.FormModalButtonCancel
+{
+	font-size:10px;
+	width:125px;
+	cursor:pointer;
+}
+.DivHeader
+{
+	color:#808080;
+	width:100%;
+	line-height:24px;
+	background-color:#f2f2f2;
+	vertical-align:top;
+}
+.DivHeaderDirections
+{
+	float:right;
+	padding-right:5px;
+}
+.DivHeaderIcons
+{
+	height:24px;
+	padding-left:5px;
+}
+.MessageArea
+{
+	padding:10px;
+	text-align:center;
+}
+.Border
+{
+	border:solid 1px #afafaf;
+}
+.BorderNoTop
+{
+	border-left:solid 1px #afafaf;
+	border-right:solid 1px #afafaf;
+	border-bottom:solid 1px #afafaf;
+	border-top:0;
+}
+.BorderBottom
+{
+	border-bottom:solid 1px #afafaf;
+}
+.Width100
+{
+	width:100%;
+}
+.ReportTable
+{
+	border:solid 0px #afafaf;
+}
+.ReportTable td
+{
+	border:solid 1px #afafaf;
+	padding-top:7px;
+	padding-bottom:7px;
+}
+.HeaderTitle
+{
+	padding: 1px 0px 1px 3px;
+}
+.CursorPointer,
+.Btn_CustomDataEntryDelete,
+.Btn_CustomDataEntryDeletePatentKeyword,
+.Btn_CustomDataEntryAddPatentKeyword
+{
+	cursor:pointer;
+}
+.Btn_CustomDataEntryDelete
+{
+    padding:3px;
+    margin-top:0;
+    margin-bottom:0;
+    margin-left:15px;
+}
+.Btn_CustomDataEntryDeletePatentKeyword,
+.Btn_CustomDataEntryAddPatentKeyword
+{
+    padding:3px;
+    margin-top:0;
+    margin-bottom:0;
+    margin-left:0;
+}
+.VerticalAlignMiddle
+{
+	vertical-align:middle;
+}
+.TableHeader
+{
+	font-weight:bold;
+	color:black;
+	background-color:#d7d7d7;
+	white-space:nowrap;
+}
+.TableSubHeader
+{
+	color:#333333;
+	background-color:#b5b5b5;
+}
+.TableSubSubHeader
+{
+	color:#333333;
+	background-color:#e4e4e4;
+}
+.TextCenter
+{
+	text-align:center;
+}
+.BGGray
+{
+	background-color:#eaeaea;
+	padding:2px 2px 2px 2px;
+}
+.BGGray
+{
+	background-color:#eaeaea;
+	padding:2px 2px 2px 2px;
+}
+.BGWhite
+{
+    background-color:#fff;
+}
+.BGLightGray,
+.BGLightGray_ClientName,
+.BGLightGray_MatterName,
+.BGLightGray_BillingAttorney,
+.BGLightGray_OriginatingAttorney,
+.BGLightGray_Office,
+.BGLightGray_PracticeGroup,
+.BGLightGray_AreaOfLaw
+{
+	background-color:#d2d2d2;
+}
+.SmallFont
+{
+	font-size:10px;
+}
+
+/*
+	modal styles
+*/
+#mask {
+	position:absolute;
+	z-index:9000;
+	background-color:#585858;
+	display:none;
+	overflow:hidden;
+}
+   
+#boxes .window {
+	position:absolute;
+	width:440px;
+	height:200px;
+	display:none;
+	z-index:9999;
+	padding:20px;
+	overflow:hidden;
+}
+ 
+ 
+/* Customize your modal window here, you can add background image too */
+#boxes #dialog {
+	width:400px; 
+	height:215px;
+	background-image:url('Images/bg_modal.png');
+	background-repeat:no-repeat;
+	background-position:center center;
+}
+.ModalTitle
+{
+	height:30px;
+	line-height:30px;
+	padding-top:15px;
+	margin-left:auto;
+	margin-right:auto;
+	width:96%;
+	border-bottom:solid 2px #d6d6d6;
+}
+.ModalTitle b
+{
+	padding-left:10px;
+}
+#ModalContent
+{
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	padding:10px;
+}
+.ModalControlArea
+{
+	background-color:#f1f1f1;
+	border:solid 1px #eaeaea;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	height:100px;
+	width:325px;
+	padding:8px;
+}
+.ImageIcon
+{
+	margin:0;
+	padding-top:3px;
+}
+.fancyTable td
+{
+    border:solid 1px gray;
+    background-color:Black;
+}
+table.NoBorders td
+{
+    border:transparent 0;
+}
+#DivULResultsDetails
+{
+    background-color:#f1f1f1;
+    border-bottom:1px solid #f1f1f9;
+    padding:0;
+    margin:0;
+}
+#DivULResultsDetails img
+{
+    padding-bottom:2px;
+    padding-top:4px;
+    padding-left:0px;
+    padding-right:0px;
+    border-right:1px solid #f1f1f1;
+    border-left:1px solid #f1f1f1;
+    border-bottom:1px solid #f1f1f1;
+    margin:0;
+}
+#DivULResultsDetails img:hover
+{
+    border-right:1px solid #d6d6d6;
+    border-left:1px solid #d6d6d6;
+    border-bottom:1px solid #d6d6d6;
+    background-color:#e6e6e6;
+    cursor:pointer;
+}
+#ULResultsDetails
+{
+    white-space:nowrap;
+    list-style-type:none;
+    padding-left:5px;
+    padding-bottom:0;
+    padding-top:0;
+    margin:0;
+}
+#ULResultsDetails li
+{
+    display:inline;
+    margin:0;
+    padding:0;
+}
+#PagingUL
+{
+    padding:0;
+    margin:0;
+    color:#fff;
+    font-family: arial, helvetica, sans-serif;
+    white-space:nowrap;
+    list-style-type:none;
+}
+#PagingUL li
+{
+    display:inline;
+    padding:4px;
+    margin:2px;
+    border:1px solid #9f9f9f;
+}
+/*
+#PagingUL li:hover
+{
+    cursor:pointer;
+    background-color:Black;
+    border:1px solid #716f70;
+}
+*/
+.PagingSpan
+{
+    float:left;
+}
+.PagingSelected
+{
+    background-color:Black;
+}
+.PagingUnSelected:hover
+{
+    cursor:pointer;
+    background-color:Black;
+}
+#MagazineSubscriptionTabs li a
+{
+    font-size:12px;
+}
+.HeadingText
+{
+    padding:5px;
+}
+.TextAreaMed
+{
+    width:400px;
+    height:60px;
+}
+.TextAreaSmall
+{
+    width:400px;
+    height:30px;
+}
+a.StatusLink
+{
+    text-decoration:underline;
+    color:Blue;
+}
+.BGSelected
+{
+    background-image:url('Images/bg_option_hover.png');
+    background-position:center center;
+    background-repeat:no-repeat;
+    width:140px;
+    height:25px;
+    text-align:center;
+    vertical-align:middle;
+    font-weight:bold;
+    color:#000000;
+    line-height:25px;
+}
+.BGSelected a
+{
+    color:#000000;
+}
+.BGSelectedNone
+{
+    background-image:url('Images/bg_option.png');
+    background-position:center center;
+    background-repeat:no-repeat;
+    width:140px;
+    height:25px;
+    text-align:center;
+    vertical-align:middle;
+    font-weight:bold;
+    color:#666666;
+    line-height:25px;
+}
+.BGSelectedNone a
+{
+    color:#666666;
+    cursor:pointer;
+}
+.BGSelectedNone:hover
+{
+    background-image:url('Images/bg_option_hover.png');
+    cursor:pointer;
+}
+.InnerTable
+{
+    padding:0;
+    margin:0;
+}
+.InnerTable tr td
+{
+    border:1px solid #fff;
+    padding:0;
+    margin:0;
+}
+.InnerTable img
+{
+    padding:0;
+    margin:0;
+}
+.InnerTable input
+{
+    width:130px;
+}
+.TRHighlight:hover
+{
+    background-color:#eaeaea;
+    border:1px solid #cccccc;
+}
+.NoDisplay
+{
+    display:none;
+}
+.CheckSmall
+{
+    width:30px;
+}
+.GroupEmailReminder,
+.imgReminder
+{
+    cursor:pointer;
+}
+.NavHeaderBold
+{
+    font-weight:bold;
+    font-size:14px;
+}
+td.NoBorder
+{
+    border:0;
+}
+td.SearchButtons
+{
+    padding:0;
+    margin:0;
+}
+td.NavSearch
+{
+    width:180px;
+    border:0;
+}
+td.NavAdminGroup
+{
+    padding:10px;
+    width:225px;
+    border:0;
+}
+td.NavAdminGroup div
+{
+    padding:5px;
+}
+.NavHeaderSubheader
+{
+    font-weight:bold;
+    padding-top:10px;
+    padding-bottom:3px;
+}
+.NavSearchFilter
+{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    padding-left:5px;
+}
+.NavSearchFilter a
+{
+    color:gray;
+    font-size:11px;
+    text-decoration:none;
+}
+.NavSearchFilter li
+{
+    padding:1px;
+}
+a.SearchTitle, .SearchTitle
+{
+    font-size:14px;
+    color:Blue;
+    text-decoration:underline;
+    font-weight:bold;
+}
+.SearchTitleNoUnderline
+{
+    font-size:14px;
+    color:Blue;
+    font-weight:bold;
+}
+.SearchMessage
+{
+    font-size:16px;
+    color:#990000;
+    font-weight:bold;
+}
+.NewMatterMessage
+{
+    width:100%;
+    text-align:center;
+    padding:20px;
+}
+td.SearchResults
+{
+    background-color:#f1f1f1;
+    padding:2px;
+}
+td.SearchResultsAdd
+{
+    /*
+    background-image:url('Images/icon_arrow_gray_right.png');
+    background-position:left center;
+    background-repeat:no-repeat;
+    */
+    padding-left:20px;
+}
+td.SearchResultsAdd b
+{
+    padding-left:15px;
+}
+.ResultsText
+{
+    font-weight:bold;
+    font-size:13px;
+    padding-bottom:3px;
+}
+.ContentBorder
+{
+    border:1px solid #373737;
+}
+.ContentBorderAdmin
+{
+    border:1px solid #00b7fb;
+}
+.ContentSpacer
+{
+    height:3px;
+    background-color:#00b7fb;
+}
+.PageSubheaderArea
+{
+    width:100%;
+    height:63px;
+    padding:0;
+    background-color:#373737;
+    z-index:-1;
+}
+.PageSubheaderArea ul
+{
+    margin:0;
+    padding:0;
+    padding-top:45px;
+
+    list-style-type:none;
+}
+.PageSubheaderArea li
+{
+    display:inline;
+    color:#ffffff;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:50px;
+    padding-bottom:6px;
+}
+.SubHeaderPlus,
+.SubHeaderPlusSelected,
+.SubHeaderInProgress,
+.SubHeaderInProgressSelected,
+.SubHeaderUsersGroups,
+.SubHeaderUsersGroupsSelected,
+.SubHeaderRecentlyUpdated,
+.SubHeaderRecentlyUpdatedSelected,
+.SubHeaderRecentlyAdded,
+.SubHeaderRecentlyAddedSelected,
+.SubHeaderNeedApproval,
+.SubHeaderNeedApprovalSelected
+{
+    background-position:center top;
+    background-repeat:no-repeat;
+}
+.SubHeaderRecentlyAdded,
+.SubHeaderRecentlyAddedSelected
+{
+    background-image:url('Images/icon_recently_added.png');
+}
+.SubHeaderRecentlyUpdated,
+.SubHeaderRecentlyUpdatedSelected
+{
+    background-image:url('Images/icon_recently_updated.png');
+}
+.SubHeaderUsersGroups,
+.SubHeaderUsersGroupsSelected
+{
+    background-image:url('Images/icon_users_groups.png');
+}
+.SubHeaderPlus,
+.SubHeaderPlusSelected
+{
+    background-image:url('Images/icon_plus.png');
+}
+.SubHeaderInProgress,
+.SubHeaderInProgressSelected
+{
+    background-image:url('Images/icon_in_progress.png');
+}
+.SubHeaderNeedApproval,
+.SubHeaderNeedApprovalSelected
+{
+    background-image:url('Images/icon_need_approval.png');
+}
+.SubHeaderPlus:hover,
+.SubHeaderInProgress:hover,
+.SubHeaderUsersGroups:hover,
+.SubHeaderRecentlyUpdated:hover,
+.SubHeaderRecentlyAdded:hover,
+.SubHeaderNeedApproval:hover
+{
+    cursor:pointer;
+    color:#000;
+    background-color:#00b7fb;
+    
+    border-radius: 5px 5px 0px 0px;
+}
+.SubHeaderPlusSelected,
+.SubHeaderInProgressSelected,
+.SubHeaderUsersGroupsSelected,
+.SubHeaderRecentlyUpdatedSelected,
+.SubHeaderRecentlyAddedSelected,
+.SubHeaderNeedApprovalSelected
+{
+    color:#000;
+    background-color:#00b7fb;
+    
+    border-radius: 5px 5px 0px 0px;
+}
+.tdSearchPagingContent
+{
+    border-left:1px solid #ccc;
+    padding:0;
+    margin:0;
+}
+.tdSearchPagingHeader
+{
+    border:0px;
+    padding:0;
+    margin:0;
+    background-color:#d6d6d6;
+}
+#divSearchPagingHeader
+{
+    padding:6px;
+}
+.Loading
+{
+    padding:20px;
+}
+.LoadingCenter
+{
+    position:fixed;
+	background-image:url('Images/loading_sm.gif');
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-color:#434343;
+	opacity:1;
+	top:49%;
+	left:49%;
+	z-index:10000;
+	padding:20px;
+	
+	border-radius: 5px 5px 5px 5px;
+	-moz-box-shadow: 0 0 1em rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, .5);
+    box-shadow: 0 0 1em rgba(0, 0, 0, .5);
+    
+	display:none;
+}
+.ShowHideStatusRow
+{
+    cursor:pointer;
+    font-weight:normal;
+    color:#017099;
+}
+.ShowHideStatusRow:hover
+{
+    text-decoration:underline;
+    color:#00b7fb;
+}
+.NotifyMessage
+{
+    color:#000;
+    font-weight:bold;
+    padding-top:2px;
+}
+.CellHighlightTop
+{   
+    background-color:#d6d6d6;
+    border-radius:5px 5px 0px 0px;
+    border-bottom:1px solid #a9a8a8;
+}
+.CellHighlightBottom
+{
+    background-color:#eaeaea;
+    border-radius: 0px 0px 5px 5px;
+}
+.CellHighlightBottomReportItem
+{
+    background-color:#fff;
+    border-radius: 0px 0px 5px 5px;
+}
+.CellHighlightBottomReportAltItem
+{
+    background-color:#d2d2d2;
+    border-radius: 0px 0px 5px 5px;
+}
+.CellNotifyMessage
+{
+    text-align:center;
+    
+    background-color:#eaeaea;
+    border-radius: 5px 5px 5px 5px;
+}
+.CellDarkGrayRadius
+{
+    text-align:center;
+    
+    padding-right:20px;
+    background-color:#f3f2f2;
+    border-radius: 5px 5px 5px 5px;
+}
+td.PatentHeader
+{
+    padding:8px;
+    border-spacing:2px;
+    background-color:#d6d6d6;
+    border:1px solid black;
+    border-radius:5px 5px 5px 5px;
+}
+.PatentHeader div
+{
+    font-size:10px;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+td.PatentHeaderDetail
+{
+    padding:8px;
+    border-spacing:2px;
+    background-color:#d6d6d6;
+    border:1px solid black;
+    
+    border-radius:5px 5px 0px 0px;
+    box-shadow: 0 0 1em rgba(0, 0, 0, .1);
+}
+.PatentHeaderDetail div
+{
+    font-size:10px;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+td.PatentHeaderBottom
+{
+    border-left:1px solid #d6d6d6;
+    border-right:1px solid #d6d6d6;
+    border-bottom:1px solid #d6d6d6;
+    
+    border-radius:0px 0px 5px 5px;
+    box-shadow: 0 0 1em rgba(0, 0, 0, .1);
+}
+.PatentHeaderBottom div
+{
+    height:1px;
+}
+.BoldUnderline
+{
+    font-weight:bold;
+    text-decoration:underline;
+}
+
+#FooterButtons
+{
+    width:100%;
+    /*background-color:#ccc;*/
+    background-color:#00b7fb;
+    position:fixed;
+    bottom:-10px;
+    
+    border-top: 1px solid #aaa;
+    -moz-box-shadow: 0 0 1em rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, .5);
+    box-shadow: 0 0 1em rgba(0, 0, 0, .5);
+}
+
+
+/*
+    TABLE SETTINGS
+*/
+.reportTable
+{
+    font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color:#f6f6f6;
+}
+.reportTable thead tr th
+{
+    border:1px solid #778899;
+    background-image:-webkit-gradient( linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.4)), color-stop(50%,rgba(255,255,255,0.2)), color-stop(51%,rgba(255,255,255,0.1)), color-stop(100%,rgba(255,255,255,0.0)));
+    background-color:#dedede;
+    color:#121517;
+    text-shadow:0 1px 1px #e8ebee;
+}
+.reportTable tbody td
+{
+    padding:5px;
+}
+.reportBorderBottom
+{
+    border-bottom:1px solid #f1f1f1;
+}
+.reportTable th,
+.fancyTable th
+{
+    padding:3px;
+}
+.fancyTable tbody tr td
+{
+    background-image:none;
+    border:0;
+}
+
+.SearchTable
+{
+    font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+.SearchTable tbody tr td
+{
+    font-size:11px;
+    color:#262c31;
+}
+.SearchTable td
+{
+    padding:5px;
+}
+.DetailTitle
+{
+    padding-left:3px;
+    padding-right:3px;
+    padding-bottom:8px;
+    padding-top:5px;
+}
+.DetailDisplayLine
+{
+    line-height:18px;
+}
+.TableResultDetail td font
+{
+    /*font-size:12px;*/
+}
+.PatentDisplayTable td
+{
+    padding:1px;
+    margin:0;
+}
+.RoundedCorners
+{
+    border-bottom:1px solid #ccc;
+    border-radius: 5px 5px 5px 5px;   
+}
+.FormInstructions
+{
+    font-size:11px;
+    color:#535353;
+    padding-left:1px;
+}
+.FormFieldNameDisplay
+{
+    font-size:11px;
+    font-weight:bold;
+    padding-top:2px;
+}
+.FormFieldHeader
+{
+    font-weight:bold;
+    text-decoration:underline;
+}
+.TableNoPadding td
+{
+    padding:0;
+}

@@ -1,0 +1,353 @@
+﻿#FormMemberList,
+#FormDataEntry,
+#FormSendReminder,
+.statusMessage,
+input[type="submit"],
+input[type="button"] {
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;  
+  border-radius: 2px;
+}
+
+
+/* Style for the contact form and status messages */
+#FormMemberList,
+#FormDataEntry,
+#FormSendReminder,
+.PopupStatusMessage,
+.PopupMasterMessage {
+  color: #666;
+  background-color: #ebedf2;
+  background: -webkit-gradient( linear, left bottom, left top, color-stop(0,#dfe1e5), color-stop(1, #ebedf2) );
+  background: -moz-linear-gradient( center bottom, #dfe1e5 0%, #ebedf2 100% );  
+  border: 1px solid #aaa;
+  -moz-box-shadow: 0 0 1em rgba(0, 0, 0, .5);
+  -webkit-box-shadow: 0 0 1em rgba(0, 0, 0, .5);
+  box-shadow: 0 0 1em rgba(0, 0, 0, .5);
+  opacity: .95;
+}
+
+
+/* The form dimensions */
+#FormMemberList,
+#FormDataEntry,
+#FormSendReminder {
+  padding: 3em 1.5em 1.5em 1.5em;
+  margin: 0 auto;
+  z-index:2000;
+}
+#FormSendReminder
+{
+  width: 300px;
+  height: 150px;
+}
+#FormDataEntry
+{
+  width: 600px;
+  height: 530px;
+}
+#FormMemberList
+{
+  width: 600px;
+  height: 460px;
+}
+
+/* Position the form in the middle of the window (if JavaScript is enabled) */
+#FormMemberList.positioned,
+#FormDataEntry.positioned,
+#FormSendReminder.positioned {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+
+/* Dimensions and position of the status messages */
+.PopupStatusMessage,
+.PopupMasterMessage {
+  display: none;
+  margin: auto;
+  padding: 1em;
+  
+  /*position popup message box near the center of the screen*/
+  position:fixed;
+  top:36%;
+  left:37%;
+  width:30em;
+  
+  z-index:5000;
+}
+
+.PopupStatusMessage p,
+.PopupMasterMessage p {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  color:#990000;
+  vertical-align:middle;
+}
+
+
+/* The header at the top of the form */
+#FormMemberList h2,
+#FormDataEntry h2,
+#FormSendReminder h2
+{
+  font-size: 2em;
+  font-style: italic;
+  letter-spacing: .05em;
+  margin: 0 0 1em -.75em;
+  padding: 1em;
+  width: 19.5em;  
+  color: #aeb6aa;
+  background: #dfe0e5 url('images/stamp.jpg') no-repeat 15em -3em; /* http://morguefile.com/archive/display/606433 */
+  border-bottom: 1px solid #aaa;
+  -moz-border-radius: 10px 10px 0 0;
+  -webkit-border-radius: 10px 10px 0 0;  
+  border-radius: 10px 10px 0 0;
+}
+
+
+/* Give form elements consistent margin, padding and line height */
+#FormMemberList ul,
+#FormDataEntry ul,
+#FormSendReminder ul
+{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#FormMemberList ul li,
+#FormDataEntry ul li,
+#FormSendReminder ul li {
+  margin: .9em 0 0 0;
+  padding: 0;
+}
+
+/* The fields */
+select,
+input,
+textarea {
+  margin: 0;
+  padding: .4em;
+  font-family: Verdana, "Georgia", serif;
+  font-size: 11px;
+  border: 1px solid #aaa;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;    
+  border-radius: 2px;
+  -moz-box-shadow: rgba(0,0,0,.2) 0 1px 4px inset;
+  -webkit-box-shadow: rgba(0,0,0,.2) 0 1px 4px inset;
+  box-shadow: rgba(0,0,0,.2) 0 1px 4px inset;
+  background: #fff;
+}
+input
+{
+    width: 95%;
+    display: block;
+}
+textarea 
+{
+    display: block;
+    height: 13em;
+    line-height: 1.5em;
+    resize: none;
+}
+.RBLADDRESS label
+{
+    display: block;
+    float: left;
+    padding-right: 8px;
+}
+
+.RBLADDRESS input
+{
+    display: block;
+    float: left;
+    width: 25px;
+}
+
+.RBLADDRESS td
+{
+    text-align: center;
+    width: 90px;
+    float: left;
+}
+
+/* Place a border around focused fields, and hide the inner shadow */
+#FormMemberList *:focus,
+#FormDataEntry *:focus,
+#FormSendReminder *:focus
+{
+  border: 1px solid #66f;
+  outline: none;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+
+/* Display correctly filled-in fields with a green background */
+input:valid,
+textarea:valid {
+  background: #dfd;
+}
+
+
+/* The Send and Cancel buttons */
+input[type="submit"],
+input[type="button"]
+{
+	float:right;
+	margin: 0 1em 0 1em;
+	width: 110px;
+	padding: 4px;
+	border: 1px solid #ccc;
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;  
+	border-radius: 2px;
+	-moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+	-webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+	box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+	color: #000000;
+	background: #ccc;
+	font-size: 10px;
+	/*line-height: 16px;*/
+	font-weight: bold;
+	opacity: .7;
+	-webkit-appearance: none;
+	-moz-transition: opacity .5s;
+	-webkit-transition: opacity .5s;
+	-o-transition: opacity .5s;
+	transition: opacity .5s;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:active,
+input[type="button"]:hover,
+input[type="button"]:active {
+  cursor: pointer;
+  opacity: 1;
+}
+
+input[type="submit"]:active,
+input[type="button"]:active {
+	opacity: .7;
+}
+
+input[type="button"] {
+  background: #ccc;
+}
+
+input[type="radio"] {                        
+border: 0px !important;
+outline: none;
+}
+
+
+#GreyOut {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: none;
+    background-color:#d6d6d6;
+    filter: alpha(opacity=30);
+    opacity: 0.2;
+}
+#FormGreyOutMemberList
+{
+    /*
+        z-index needs to be less than 5000 (that's what the popup status message box is set to)
+        and greater than 3000 (which is what the popup forms are set to)
+    */
+    z-index:4000;
+    
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right:auto;
+    margin-left:auto;
+  
+    display: none;
+    background-color: black;
+    filter: alpha(opacity=30);
+    opacity: 0.3;
+}
+#FormGreyOutMemberList
+{
+    width: 630px;
+    height: 510px;
+}
+* html #GreyOut,
+* html #FormGreyOutMemberList {
+    position: absolute;
+}
+
+#PGetCalendar_DivSubscription
+{
+    /*
+        z-index needs to be less than 5000 (that's what the popup status message box is set to)
+        and greater than 3000 (which is what the popup forms are set to)
+    */
+    z-index:4000;    
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right:auto;
+    margin-left:auto;
+    display: none;
+    background-color: white;
+    border: 1px solid black;
+}
+#PGetCalendar_DivSubscription
+{
+    width: 388px;
+    height: 458px;
+}
+* html #PGetCalendar_DivSubscription {
+    position: absolute;
+}
+
+#PGetVendorList_DivVendor
+{
+    /*
+        z-index needs to be less than 5000 (that's what the popup status message box is set to)
+        and greater than 3000 (which is what the popup forms are set to)
+    */
+    z-index:4000;    
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right:auto;
+    margin-left:auto;
+    display: none;
+    background-color: white;
+}
+#PGetVendorList_DivVendor
+{
+    width: 391px;
+    height: 470px;
+}
+* html #PGetVendorList_DivVendor {
+    position: absolute;
+}

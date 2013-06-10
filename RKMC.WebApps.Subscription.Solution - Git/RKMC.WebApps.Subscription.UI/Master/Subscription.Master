@@ -1,0 +1,114 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Subscription.Master.cs" Inherits="RKMC.WebApps.Subscription.Solution.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title>Magazine Subscription Items</title>
+    <script type="text/javascript" src="http://apps/library/JQuery/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="http://apps/library/JQuery/jquery-ui-1.10.2.js"></script>
+    <script type="text/javascript" src="JS/JSBaseSubscription.js"></script>
+
+    
+    <!-- CUSTOM SCRIPTS -->
+    <script type="text/javascript" src="http://apps/library/Scripts/NavToggle.js"></script>
+    <script type="text/javascript" src="http://apps/library/Scripts/Global.js"></script>
+    
+
+    <!-- CUSTOM THEMES -->
+    <link href="http://apps/library/Styles/Template.css" type="text/css" rel="stylesheet" />
+    <link href="http://apps/library/Styles/FixedFooter.css" type="text/css" rel="stylesheet" />
+    <link href="http://apps/library/Styles/JQuery-UI.css" type="text/css" rel="stylesheet" />
+    
+    <!--<link href="http://apps/library/Styles/FixedHeaderTable.css" type="text/css" rel="stylesheet" />-->
+
+    
+    <!-- LOCAL APP THEMES -->
+    <link href="../App_Themes/Subscription/JQueryForm.css" type="text/css" rel="stylesheet" />
+    <link href="../App_Themes/Subscription/Subscription.css" type="text/css" rel="stylesheet" />
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div id="GreyOut"></div>
+    <div id="FormGreyOutMemberList"></div>
+    <div id="LoadingImageCenter" class="LoadingCenter"></div>
+ 
+    <form id="form1" runat="server" name="MainDataEntryForm" enableviewstate="false">
+    <input type="hidden" id="MasterDataEntryFull_SaveTypeEnumID" name="SaveTypeEnumID" value="50" />
+    <input type="hidden" id="MasterDataEntryFull_IsAdmin" name="IsAdmin" value="NO" />
+
+    <asp:Literal runat="server" ID="litMasterLoggedOnUserID" />
+    <asp:Literal runat="server" ID="litMasterLoggedOnUserGroupID" />
+    <div id="boxes">
+        <%--<div id="dialog" class="window">
+            <div class="ModalTitle">
+                <b id="ModalTitleText"></b>
+            </div>
+            <div id="LoadingImageModal" class="Loading"></div>
+            <div id="ModalContent" style="display:none;"></div>
+        </div>--%>
+        <div id="mask"></div>
+    </div>
+    <div id="BodyParent">
+        <div id="Header">
+            <div id="HeaderContentLeft">
+                <ul> 
+                    <li><a href="http://portal">Portal</a></li>
+                </ul>
+            </div>
+            <div id="HeaderContentRight">
+                <ul>
+                    <li><asp:Label runat="server" ID="LblLoggedOnUser" Text="Name" /></li>
+                </ul>
+            </div>
+	        <p id="Subheader"><asp:Image ID="ImgLogo" runat="server" ImageUrl="http://apps/library/images/rkmc_logo.gif" /></p>
+        </div>
+
+
+        <!-- MAIN CONTENT -->
+        <div id="ContentWrapper">
+            <div id="ContentWrapperColumn">
+                <div id="ReportContent">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- LEFT NAVIGATION AREA -->
+        <div id="ContentLeftColumn" style="overflow:auto;"></div>
+
+
+        <!-- TOGGLE AREA -->
+        <div id="ContentRightColumn" class="ToggleImage"></div>
+
+
+        <!-- FOOTER AREA -->
+        <div id="FooterFixed">
+            <div class="footer_disclaimer">&nbsp;<a id="Disclaimer">Disclaimer</a></div>
+            <div class="footer_powered_by_logo"><a href="http://www.rkmc.com" target="_blank"><asp:Image ID="Image1" runat="server" ImageUrl="http://apps/library/Images/powered_by_logo.png" BorderWidth="0" /></a></div>
+            <div class="footer_powered_by">Powered By:</div>
+        </div>
+
+
+<%--        <!-- FORM BUTTONS -->
+        <div id="FooterButtons" dir="DOWN">
+            <table align="center" cellpadding="4" cellspacing="4">
+                <tr>
+                    <td colspan="2" align="center"><asp:Literal runat="server" ID="litButtonSaveFull" /><asp:Literal runat="server" ID="litButtonSaveCompleteFull" /><asp:Literal runat="server" ID="litButtonSaveLaterFull" /><input type="button" id="btnDataEntryCancelFull" value="Cancel" class="BtnCancelFull" /></td>
+                </tr>
+            </table>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />--%>
+    </div>
+    </form>
+
+</body>
+</html>

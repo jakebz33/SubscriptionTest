@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SubscriptionService.aspx.cs" Inherits="RKMC.WebApps.Subscription.Services.SubscriptionService" %>
